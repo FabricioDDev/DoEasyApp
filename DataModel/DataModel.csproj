@@ -41,10 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IconData.cs" />
     <Compile Include="NoteData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeData.cs" />
     <Compile Include="UserData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{fe26d49f-b177-458d-96ec-2854f48f1d96}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{dd4017f6-2e34-415d-a3b8-11ecba18a98b}</Project>
+      <Name>DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

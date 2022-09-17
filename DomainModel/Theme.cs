@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
-    class Theme
+    public class Theme
     {
+        public Theme()
+        {
+            Notes = new List<Note>();
+            Note notePredeterminate = new Note();
+            notePredeterminate.Title = "Default";
+            notePredeterminate.Description = "Default";
+            Notes.Add(notePredeterminate);
+        }
+        
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public int IdIcon { get; set; }
+        public List<Note> Notes { get; set; }
+        public int IdUser { get; set; }
     }
 }

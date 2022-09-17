@@ -3,31 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DomainModel;
 using DB;
+using DomainModel;
 
 namespace DataModel
 {
-    public class NoteData
+    public class IconData
     {
-        public NoteData()
+        public IconData()
         {
             data = new DataAccess();
         }
-        public DataAccess data;
-        public List<Note> Listing()
+        private DataAccess data;
+        public List<Icon> Listing()
         {
-            List<Note> list = new List<Note>();
+            List<Icon> list = new List<Icon>();
             try
             {
-                data.Query("select Id, IdTheme, Title, Description from Note");
+                data.Query("select Id, Description from Icon");
                 data.Read();
                 while (data.readerProp.Read())
                 {
-                    Note aux = new Note();
+                    Icon aux = new Icon();
                     aux.Id = (int)data.readerProp["Id"];
-                    aux.IdTheme = (int)data.readerProp["IdTheme"];
-                    aux.Title = (string)data.readerProp["Title"];
                     aux.Description = (string)data.readerProp["Description"];
                     list.Add(aux);
                 }
@@ -37,7 +35,8 @@ namespace DataModel
             {
                 throw ex;
             }
-            finally { data.Close();}
+            finally { data.Close(); }
         }
     }
 }
+

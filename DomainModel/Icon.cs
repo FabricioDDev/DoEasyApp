@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
-    public class Note
+    public class Icon
     {
         public int Id { get; set; }
-        public int IdTheme { get; set; }
-        public string Title { get; set; }
         public string Description { get; set; }
     }
 }
