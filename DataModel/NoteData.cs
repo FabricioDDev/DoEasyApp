@@ -39,5 +39,36 @@ namespace DataModel
             }
             finally { data.Close();}
         }
+    
+        public void Add(Note newnote)
+        {
+            try
+            {
+                data.Query("insert into Note (Title, Description, IdTheme) values (@Title, @Description, @IdTheme)");
+                data.Parameters("@Title", newnote.Title);
+                data.Parameters("@Description", newnote.Description);
+                data.Parameters("@IdTheme", newnote.IdTheme);
+                data.Execute();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close();}
+        }
+        public void Delete(int Id)
+        {
+            try
+            {
+                data.Query("delete Note where Id = @Id");
+                data.Parameters("Id", Id);
+                data.Execute();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
     }
 }

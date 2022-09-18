@@ -71,6 +71,20 @@ namespace DataModel
             finally { data.Close(); }
 
         }
-    
+
+        public void Delete(int Id)
+        {
+            try
+            {
+                data.Query("delete Theme where Id = @Id");
+                data.Parameters("Id", Id);
+                data.Execute();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
     }
 }
