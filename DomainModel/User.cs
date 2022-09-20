@@ -13,7 +13,7 @@ namespace DomainModel
             Theme = new List<Theme>();
             Theme theme = new Theme();
             theme.Title = "Default";
-            theme.Icon = "fas fa-sticky - note";
+            theme.IdIcon = 1;
             Theme.Add(theme);
         }
         public int NroUser { get; set; }

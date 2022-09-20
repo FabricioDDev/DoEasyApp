@@ -13,5 +13,15 @@ namespace DoEasyWebProyect
         {
 
         }
+
+        protected void BtnSignIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmSignIn.aspx");
+        }
+
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmLogin.aspx");
+        }
     }
 }

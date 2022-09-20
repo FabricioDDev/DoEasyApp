@@ -27,7 +27,7 @@ namespace DataModel
                     Theme aux = new Theme();
                     aux.Id = (int)data.readerProp["Id"];
                     aux.Title = (string)data.readerProp["Title"];
-                    aux.IdIcon = (int)data.readerProp["Icon"];
+                   // aux.IdIcon = (int)data.readerProp["Icon"];
                     aux.IdUser = (int)data.readerProp["IdUser"];
                     list.Add(aux);
                 }

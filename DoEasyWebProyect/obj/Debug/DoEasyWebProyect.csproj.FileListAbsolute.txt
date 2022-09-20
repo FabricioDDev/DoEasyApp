@@ -57,3 +57,9 @@ C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\obj\Debug\DoEa
 C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\obj\Debug\DoEasyWebProyect.csproj.CopyComplete
 C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\obj\Debug\DoEasyWebProyect.dll
 C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\obj\Debug\DoEasyWebProyect.pdb
+C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\bin\DataModel.dll
+C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\bin\DB.dll
+C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\bin\DomainModel.dll
+C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\bin\DataModel.pdb
+C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\bin\DB.pdb
+C:\Users\brenda\Desktop\Proyectos\DoEasySolution\DoEasyWebProyect\bin\DomainModel.pdb

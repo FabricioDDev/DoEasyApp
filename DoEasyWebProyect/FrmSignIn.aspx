@@ -7,18 +7,20 @@
 
                   <form>
                       <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Your UserName or Mail</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label class="form-label">Your UserName or Mail*</label>
+                        <asp:TextBox ID="TxtUser" CssClass="form-control" runat="server"></asp:TextBox>
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                       </div>
                       
                       <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Your Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label class="form-label">Your Password*</label>
+                         <asp:TextBox ID="TxtPass" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
                       </div>
-                      
-                      
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <div class="mb-3">
+                           <asp:LinkButton ID="LbLogin" OnClick="LbLogin_Click"  runat="server">Already Have a account?</asp:LinkButton>
+                      </div>
+
+                      <asp:Button ID="BtnGo" OnClick="BtnGo_Click" CssClass="btn btn-primary" runat="server" Text="Go" />
                     </form>
  
            </div>

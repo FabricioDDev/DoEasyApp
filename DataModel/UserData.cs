@@ -39,5 +39,22 @@ namespace DataModel
             }
             finally { data.Close(); }
         }
+        
+        public void Add(User newUser)
+        {
+            try
+            {
+                data.Query("insert into UserTable (UserName, UserMail, UserPass) values (@User, @Mail, @Pass)");
+                data.Parameters("@User", newUser.Name);
+                data.Parameters("@Mail", newUser.Mail);
+                data.Parameters("@Pass", newUser.Pass);
+                data.Execute();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
     }
 }
