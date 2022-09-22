@@ -13,7 +13,8 @@ namespace DomainModel
             Theme = new List<Theme>();
             Theme theme = new Theme();
             theme.Title = "Default";
-            theme.IdIcon = 1;
+            theme.Icon = new Icon();
+            theme.Icon.Id = 1;
             Theme.Add(theme);
         }
         public int NroUser { get; set; }

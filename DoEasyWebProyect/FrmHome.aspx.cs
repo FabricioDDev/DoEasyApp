@@ -27,5 +27,12 @@ namespace DoEasyWebProyect.ClientForms
                 
             
         }
+
+        protected void BtnThemeView_Click(object sender, EventArgs e)
+        {
+            int IdTheme = int.Parse(((Button)sender).CommandArgument);
+            int Id = int.Parse(Request.QueryString["Id"]);
+            Response.Redirect("FrmThemeView.aspx?IdUser=" + Id + "&&IdTheme=" + IdTheme);
+        }
     }
 }

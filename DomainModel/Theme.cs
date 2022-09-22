@@ -15,11 +15,12 @@ namespace DomainModel
             notePredeterminate.Title = "Default";
             notePredeterminate.Description = "Default";
             Notes.Add(notePredeterminate);
+            
         }
         
         public int Id { get; set; }
         public string Title { get; set; }
-        public int IdIcon { get; set; }
+        public Icon Icon { get; set; }
         public List<Note> Notes { get; set; }
         public int IdUser { get; set; }
     }
