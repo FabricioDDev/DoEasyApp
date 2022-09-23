@@ -5,10 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col">
-            
-                <h1>Themes</h1>
-                <asp:Button ID="BtnAddTheme" CssClass="btn btn-success" runat="server" Text="+" />
-            
+            <h1>Themes</h1>
+        </div>
+        <div class="col">
+            <asp:Button ID="BtnAddTheme" CssClass="btn btn-success" runat="server" Text="+" />
         </div>
     </div>
    <div class="row row-cols-1 row-cols-md-3 g-4">
