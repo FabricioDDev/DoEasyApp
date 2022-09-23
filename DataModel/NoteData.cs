@@ -20,13 +20,14 @@ namespace DataModel
             List<Note> list = new List<Note>();
             try
             {
-                data.Query("select Id, IdTheme, Title, Description from Note");
+                data.Query("select Id, IdTheme, IdUser, Title, Description from Note");
                 data.Read();
                 while (data.readerProp.Read())
                 {
                     Note aux = new Note();
                     aux.Id = (int)data.readerProp["Id"];
                     aux.IdTheme = (int)data.readerProp["IdTheme"];
+                    aux.IdUser = (int)data.readerProp["IdUser"];
                     aux.Title = (string)data.readerProp["Title"];
                     aux.Description = (string)data.readerProp["Description"];
                     list.Add(aux);
