@@ -9,37 +9,37 @@ using DataModel;
 
 namespace DoEasyWebProyect
 {
-    public partial class FrmThemeView : System.Web.UI.Page
+    public partial class FrmThemeViewV2 : System.Web.UI.Page
     {
-        public FrmThemeView()
+        public FrmThemeViewV2()
         {
             notes = new List<Note>();
         }
         private List<Note> notes;
         protected void Page_Load(object sender, EventArgs e)
         {
-            int IdUser = int.Parse(Request.QueryString["IdUser"]);
+            int Id = int.Parse(Request.QueryString["Id"]);
             int IdTheme = int.Parse(Request.QueryString["IdTheme"]);
             NoteData NoteData = new NoteData();
-            notes = NoteData.Listing().FindAll(x => x.IdUser == IdUser && x.IdTheme == IdTheme);
+            notes = NoteData.Listing().FindAll(x => x.IdUser == Id && x.IdTheme == IdTheme);
             if (!IsPostBack)
             {
-                RptNote.DataSource = notes;
-                RptNote.DataBind();
+                GvNote.DataSource = notes;
+                GvNote.DataBind();
             }
         }
 
         protected void BtnBack_Click(object sender, EventArgs e)
         {
-            int IdUser = int.Parse(Request.QueryString["IdUser"]);
-            Response.Redirect("FrmHome.aspx?Id=" + IdUser);
+            int Id = int.Parse(Request.QueryString["Id"]);
+            Response.Redirect("FrmHome.aspx?Id=" + Id);
         }
 
         protected void BtnView_Click(object sender, EventArgs e)
         {
-            int IdUser = int.Parse(Request.QueryString["IdUser"]);
+            int Id = int.Parse(Request.QueryString["Id"]);
             int IdTheme = int.Parse(Request.QueryString["IdTheme"]);
-            Response.Redirect("FrmThemeViewV2.aspx?Id=" + IdUser + "&&IdTheme=" + IdTheme);
+            Response.Redirect("FrmThemeView.aspx?IdUser=" + Id + "&&IdTheme=" + IdTheme);
         }
     }
 }

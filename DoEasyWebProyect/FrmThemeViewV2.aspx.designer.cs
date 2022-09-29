@@ -11,7 +11,7 @@ namespace DoEasyWebProyect
 {
 
 
-    public partial class FrmThemeView
+    public partial class FrmThemeViewV2
     {
 
         /// <summary>
@@ -60,12 +60,12 @@ namespace DoEasyWebProyect
         protected global::System.Web.UI.WebControls.Button Button5;
 
         /// <summary>
-        /// Control RptNote.
+        /// Control GvNote.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RptNote;
+        protected global::System.Web.UI.WebControls.GridView GvNote;
     }
 }

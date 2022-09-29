@@ -72,6 +72,7 @@
     <Content Include="FrmSignIn.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="FrmThemeView.aspx" />
+    <Content Include="FrmThemeViewV2.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="FrmThemeView.aspx.designer.cs">
       <DependentUpon>FrmThemeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemeViewV2.aspx.cs">
+      <DependentUpon>FrmThemeViewV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmThemeViewV2.aspx.designer.cs">
+      <DependentUpon>FrmThemeViewV2.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
