@@ -16,11 +16,15 @@ namespace DoEasyWebProyect
             notes = new List<Note>();
         }
         private List<Note> notes;
+        private int IdUser;
+        private int IdTheme;
         protected void Page_Load(object sender, EventArgs e)
         {
-            int IdUser = int.Parse(Request.QueryString["IdUser"]);
-            int IdTheme = int.Parse(Request.QueryString["IdTheme"]);
             NoteData NoteData = new NoteData();
+
+            IdUser = int.Parse(Session["IdUser"].ToString());
+            IdTheme = int.Parse(Request.QueryString["IdTheme"]);
+            
             notes = NoteData.Listing().FindAll(x => x.IdUser == IdUser && x.IdTheme == IdTheme);
             if (!IsPostBack)
             {
@@ -31,15 +35,20 @@ namespace DoEasyWebProyect
 
         protected void BtnBack_Click(object sender, EventArgs e)
         {
-            int IdUser = int.Parse(Request.QueryString["IdUser"]);
-            Response.Redirect("FrmHome.aspx?Id=" + IdUser);
+            
+            Response.Redirect("FrmHome.aspx");
         }
 
         protected void BtnView_Click(object sender, EventArgs e)
         {
-            int IdUser = int.Parse(Request.QueryString["IdUser"]);
-            int IdTheme = int.Parse(Request.QueryString["IdTheme"]);
-            Response.Redirect("FrmThemeViewV2.aspx?Id=" + IdUser + "&&IdTheme=" + IdTheme);
+            
+            Response.Redirect("FrmThemeViewV2.aspx?IdTheme=" + IdTheme);
+        }
+
+        protected void BtnConfig_Click(object sender, EventArgs e)
+        {
+            int View = 1;
+            Response.Redirect("FrmThemeRegister.aspx?IdTheme=" + IdTheme + "&&View=" + View);
         }
     }
 }

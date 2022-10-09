@@ -39,7 +39,7 @@
                      <asp:Button ID="BtnView" OnClick="BtnView_Click"  CssClass="btn btn-success" runat="server" Text="Vista" />
                 </div>
                 <div class="col">
-                     <asp:Button ID="Button5" CssClass="btn btn-success" runat="server" Text="Config" />
+                     <asp:Button ID="BtnConfig" OnClick="BtnConfig_Click" CssClass="btn btn-success" runat="server" Text="Config" />
                 </div>
             </div>
 

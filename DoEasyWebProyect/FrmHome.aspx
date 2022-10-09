@@ -8,7 +8,7 @@
             <h1>Themes</h1>
         </div>
         <div class="col">
-            <asp:Button ID="BtnAddTheme" CssClass="btn btn-success" runat="server" Text="+" />
+            <asp:Button ID="BtnAddTheme" OnClick="BtnAddTheme_Click" CssClass="btn btn-success" runat="server" Text="+" />
         </div>
     </div>
    <div class="row row-cols-1 row-cols-md-3 g-4">

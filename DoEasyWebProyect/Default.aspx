@@ -7,8 +7,8 @@
            <div style="border:solid 1px black; border-radius:20px; padding:20px;">
 
                   <asp:Button ID="BtnSignIn" OnClick="BtnSignIn_Click" CssClass="btn btn-success btn-lg align-self-center" runat="server" Text="Sign In" />
-             
-                   <asp:Button ID="BtnLogin" OnClick="BtnLogin_Click" CssClass="btn btn-success btn-lg" runat="server" Text="Login" />
+                
+                  <asp:Button ID="BtnLogin" OnClick="BtnLogin_Click" CssClass="btn btn-success btn-lg" runat="server" Text="Login" />
  
            </div>
         </div>

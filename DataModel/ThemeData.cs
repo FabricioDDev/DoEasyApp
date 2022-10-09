@@ -42,14 +42,14 @@ namespace DataModel
             finally { data.Close(); }
         }
 
-        public void AddTheme(Theme NewTheme)
+        public void AddTheme(Theme theme)
         {
             try
             {
-                data.Query("insert into Theme ( Title, IdIcon, IdUser) values (@Id, @Title, @Icon, @IdUser)");
-                data.Parameters("@Title", NewTheme.Title);
-                data.Parameters("@Icon", NewTheme.Icon.Description);
-                data.Parameters("@IdUser", NewTheme.IdUser);
+                data.Query("insert into Theme ( Title, IdIcon, IdUser) values (@Title, @Icon, @IdUser)");
+                data.Parameters("@Title", theme.Title);
+                data.Parameters("@Icon", theme.Icon.Id);
+                data.Parameters("@IdUser", theme.IdUser);
                 data.Execute();
             }
             catch(Exception ex)
@@ -58,20 +58,23 @@ namespace DataModel
             }
             finally { data.Close(); }
         }
-        public void ModificateThem(Theme theme)
+        public void ModificateTheme(Theme theme)
         {
             try{
-                data.Query("update Theme set Title = @Title, IdIcon = @IdIcon");
+             
+
+                data.Query("update Theme set Title = @Title, IdIcon = @Icon where Id = @Id");
                 data.Parameters("@Title", theme.Title);
-                data.Parameters("@IdIcon", theme.Icon.Id);
+                data.Parameters("@Icon", theme.Icon.Id);
+                data.Parameters("@Id", theme.Id);
                 data.Execute();
+                data.Close();
             }
             catch(Exception ex)
             {
                 throw ex;
             }
             finally { data.Close(); }
-
         }
 
         public void Delete(int Id)

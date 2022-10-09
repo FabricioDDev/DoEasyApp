@@ -28,7 +28,8 @@ namespace DoEasyWebProyect
             User user = UserData.Listing().Find(x => x.Name == TxtUser.Text || x.Mail == TxtUser.Text && x.Pass == TxtPass.Text);
             if(user != null)
             {
-                Response.Redirect("FrmHome.aspx?Id=" + user.NroUser);
+                Session.Add("IdUser", user.NroUser);
+                Response.Redirect("FrmHome.aspx");
             }
             else
             {

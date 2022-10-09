@@ -11,7 +11,7 @@ namespace DoEasyWebProyect
 {
 
 
-    public partial class FrmThemeView
+    public partial class FrmThemeRegister
     {
 
         /// <summary>
@@ -33,39 +33,21 @@ namespace DoEasyWebProyect
         protected global::System.Web.UI.WebControls.Button BtnBack;
 
         /// <summary>
-        /// Control Button1.
+        /// Control TextBox1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// Control BtnView.
+        /// Control BtnFinish.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnView;
-
-        /// <summary>
-        /// Control BtnConfig.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnConfig;
-
-        /// <summary>
-        /// Control RptNote.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RptNote;
+        protected global::System.Web.UI.WebControls.Button BtnFinish;
     }
 }

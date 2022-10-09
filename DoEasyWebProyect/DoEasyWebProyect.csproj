@@ -71,8 +71,10 @@
     <Content Include="FrmLogin.aspx" />
     <Content Include="FrmSignIn.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="FrmThemeRegister.aspx" />
     <Content Include="FrmThemeView.aspx" />
     <Content Include="FrmThemeViewV2.aspx" />
+    <Content Include="FrmUserInfo.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -83,6 +85,13 @@
     </Compile>
     <Compile Include="FrmHome.aspx.designer.cs">
       <DependentUpon>FrmHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemeRegister.aspx.cs">
+      <DependentUpon>FrmThemeRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmThemeRegister.aspx.designer.cs">
+      <DependentUpon>FrmThemeRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmThemeView.aspx.cs">
       <DependentUpon>FrmThemeView.aspx</DependentUpon>
@@ -97,6 +106,13 @@
     </Compile>
     <Compile Include="FrmThemeViewV2.aspx.designer.cs">
       <DependentUpon>FrmThemeViewV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserInfo.aspx.cs">
+      <DependentUpon>FrmUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmUserInfo.aspx.designer.cs">
+      <DependentUpon>FrmUserInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

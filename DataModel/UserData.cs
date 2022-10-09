@@ -56,5 +56,15 @@ namespace DataModel
             }
             finally { data.Close(); }
         }
+    
+        public void Modificate(User user)
+        {
+            data.Query("update UserTable set UserName = @user, UserMail = @mail where NroUser = @Id");
+            data.Parameters("@user", user.Name);
+            data.Parameters("@mail", user.Mail);
+            data.Parameters("@Id", user.NroUser);
+            data.Execute();
+            data.Close();
+        }
     }
 }
