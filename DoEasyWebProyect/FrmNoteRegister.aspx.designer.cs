@@ -11,7 +11,7 @@ namespace DoEasyWebProyect
 {
 
 
-    public partial class FrmThemeViewV2
+    public partial class FrmNoteRegister
     {
 
         /// <summary>
@@ -33,57 +33,30 @@ namespace DoEasyWebProyect
         protected global::System.Web.UI.WebControls.Button BtnBack;
 
         /// <summary>
-        /// Control LblTitle.
+        /// Control TxtTitle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblTitle;
+        protected global::System.Web.UI.WebControls.TextBox TxtTitle;
 
         /// <summary>
-        /// Control LblIcon.
+        /// Control TxtNote.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblIcon;
+        protected global::System.Web.UI.WebControls.TextBox TxtNote;
 
         /// <summary>
-        /// Control BtnAddNote.
+        /// Control BtnFinish.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnAddNote;
-
-        /// <summary>
-        /// Control BtnView.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnView;
-
-        /// <summary>
-        /// Control BtnConfig.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnConfig;
-
-        /// <summary>
-        /// Control GvNote.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GvNote;
+        protected global::System.Web.UI.WebControls.Button BtnFinish;
     }
 }

@@ -30,11 +30,12 @@
             </div>
 
             <div class="row">
-                <div class="col">
-                    <h1>Nombre-Tema</h1>
+                 <div class="col">
+                    <asp:Label ID="LblTitle" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="LblIcon" CssClass="" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="col">
-                    <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="+" />
+                    <asp:Button ID="BtnAddNote" OnClick="BtnAddNote_Click" CssClass="btn btn-success" runat="server" Text="+" />
                 </div>
                 <div class="col">
                      <asp:Button ID="BtnView" OnClick="BtnView_Click" CssClass="btn btn-success" runat="server" Text="Vista" />
@@ -44,11 +45,20 @@
                 </div>
             </div>
             <div class="row">
-                <asp:GridView ID="GvNote" runat="server"></asp:GridView>
+                <asp:GridView ID="GvNote" CssClass="table" DataKeyNames="Id" OnRowDeleting="GvNote_RowDeleting" OnSelectedIndexChanged="GvNote_SelectedIndexChanged" runat="server" AutoGenerateColumns="false">
+                    <Columns>
+                        <asp:BoundField DataField="Title" HeaderText="Title"/>
+                        <asp:BoundField DataField="Description" HeaderText="Note" />
+                        
+                        <asp:CommandField ShowSelectButton="true" SelectText="Update" />
+                        <asp:CommandField ShowDeleteButton="true" DeleteText="Trash" />
+                    </Columns>
+                </asp:GridView>
             </div>
         </div>
     </form>
      <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/65700b021d.js" crossorigin="anonymous"></script>
 </body>
 </html>

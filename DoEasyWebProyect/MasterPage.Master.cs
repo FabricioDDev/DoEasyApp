@@ -28,5 +28,11 @@ namespace DoEasyWebProyect.ClientForms
         {
             Response.Redirect("FrmUserInfo.aspx");
         }
+
+        protected void LkbOut_Click(object sender, EventArgs e)
+        {
+            Session.Remove("IdUser");
+            Response.Redirect("FrmSignIn.aspx");
+        }
     }
 }

@@ -45,10 +45,11 @@ namespace DataModel
         {
             try
             {
-                data.Query("insert into Note (Title, Description, IdTheme) values (@Title, @Description, @IdTheme)");
+                data.Query("insert into Note (Title, Description, IdTheme, IdUser) values (@Title, @Description, @IdTheme, @IdUser)");
                 data.Parameters("@Title", newnote.Title);
                 data.Parameters("@Description", newnote.Description);
                 data.Parameters("@IdTheme", newnote.IdTheme);
+                data.Parameters("@IdUser", newnote.IdUser);
                 data.Execute();
             }
             catch(Exception ex)
@@ -61,8 +62,9 @@ namespace DataModel
         {
             try
             {
-                data.Query("delete Note where Id = @Id");
-                data.Parameters("Id", Id);
+                data.Query("delete Note where Id = "+Id);
+                
+                
                 data.Execute();
             }
             catch (Exception ex)
@@ -70,6 +72,17 @@ namespace DataModel
                 throw ex;
             }
             finally { data.Close(); }
+        }
+        
+        public void Modificate(Note note)
+        {
+
+            data.Query("update Note set Title = @Title, Description = @Description where Id = @Id");
+            data.Parameters("@Title", note.Title);
+            data.Parameters("@Description", note.Description);
+            data.Parameters("@Id", note.Id);
+            data.Execute();
+            data.Close();
         }
     }
 }

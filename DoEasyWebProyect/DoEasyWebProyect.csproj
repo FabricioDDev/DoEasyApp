@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="FrmHome.aspx" />
     <Content Include="FrmLogin.aspx" />
+    <Content Include="FrmNoteRegister.aspx" />
     <Content Include="FrmSignIn.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="FrmThemeRegister.aspx" />
@@ -85,6 +86,13 @@
     </Compile>
     <Compile Include="FrmHome.aspx.designer.cs">
       <DependentUpon>FrmHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNoteRegister.aspx.cs">
+      <DependentUpon>FrmNoteRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmNoteRegister.aspx.designer.cs">
+      <DependentUpon>FrmNoteRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmThemeRegister.aspx.cs">
       <DependentUpon>FrmThemeRegister.aspx</DependentUpon>

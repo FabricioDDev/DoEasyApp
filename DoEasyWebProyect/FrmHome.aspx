@@ -11,6 +11,11 @@
             <asp:Button ID="BtnAddTheme" OnClick="BtnAddTheme_Click" CssClass="btn btn-success" runat="server" Text="+" />
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <asp:Label ID="LblAlert" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
    <div class="row row-cols-1 row-cols-md-3 g-4">
       
      
@@ -18,9 +23,9 @@
             <ItemTemplate>
       <div class="col">
          
-             
+          
                    <div class="card text-bg-success mb-3" style="max-width: 18rem;">
-                      <div class="card-header"><%#Eval("Title") %></div>
+                      <div class="card-header"><%#Eval("Title") %> <asp:Button ID="BtnDeleteTheme" OnClick="BtnDeleteTheme_Click" CommandArgument='<%#Eval("Id") %>' runat="server" Text="Button" /></div>
                        <i class="<%#Eval("Icon.Description") %>"></i>
                       <div class="card-body">
                         
@@ -32,4 +37,5 @@
                  </ItemTemplate>
           </asp:Repeater>
     </div>
+
 </asp:Content>

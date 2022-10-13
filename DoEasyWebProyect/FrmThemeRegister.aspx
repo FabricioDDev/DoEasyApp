@@ -31,6 +31,15 @@
                 <div class="col">
                     
                     <asp:TextBox ID="TextBox1" AutoPostBack="false"  runat="server"></asp:TextBox>
+                    <asp:Label ID="LblIcon" runat="server" Text=""></asp:Label>
+                    <div>
+                        <asp:Repeater ID="RptIcon" runat="server">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LkbIcon" OnClick="LkbIcon_Click" CommandArgument='<%#Eval("Description") %>' CssClass='<%#Eval("Description") %>' runat="server"></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                    
                     <asp:Button ID="BtnFinish" OnClick="BtnFinish_Click" runat="server" Text="Button" />
                 </div>
             </div>
@@ -38,5 +47,6 @@
     </form>
      <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/65700b021d.js" crossorigin="anonymous"></script>
 </body>
 </html>

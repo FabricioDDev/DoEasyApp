@@ -33,13 +33,31 @@ namespace DoEasyWebProyect
         protected global::System.Web.UI.WebControls.Button BtnBack;
 
         /// <summary>
-        /// Control Button1.
+        /// Control LblTitle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label LblTitle;
+
+        /// <summary>
+        /// Control LblIcon.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblIcon;
+
+        /// <summary>
+        /// Control BtnAddNote.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnAddNote;
 
         /// <summary>
         /// Control BtnView.
